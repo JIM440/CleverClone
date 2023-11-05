@@ -68,7 +68,7 @@ h2 {
   font-weight: 400;
 }
 
-h1.active span::before {
+h1.reveal span::before {
   width: 100%;
 }
 
@@ -498,7 +498,30 @@ li a.btn .bi-chevron-compact-down {
 /* btn hero */
 .btn-container {
   margin-top: 3rem;
+  position: relative;
 }
+
+.btn-container .bg-rounded {
+  position: absolute;
+  width: 90vw;
+  height: 400px;
+  top: 50px;
+  left: -150px;
+  z-index: -1;
+  background-color: rgb(237, 245, 255);
+  border-top-right-radius: 50%;
+}
+
+@media (min-width: 700px) {
+  .bg-rounded {
+    width: 70vw;
+  }
+}
+
+.about {
+  background-color: rgb(237, 245, 255);
+}
+
 .btn-container,
 .btn-container > div {
   display: flex;
@@ -568,5 +591,23 @@ li a.btn .bi-chevron-compact-down {
 }
 
 body {
+  padding-top: 0px;
   overflow-x: hidden;
+}
+
+.brown-overlay {
+  background-color: #cf2e2e;
+  color: #fff;
+  padding-block: 1rem;
+  font-size: 15px;
+}
+
+.brown-overlay .container {
+  max-width: 1000px;
+}
+
+.brown-overlay a {
+  color: #fff;
+  text-decoration: underline;
+  font-weight: 400;
 }
